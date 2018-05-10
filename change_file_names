@@ -1,0 +1,8 @@
+import os
+tag = 'C5W1'
+for filename in os.listdir('.'):
+    print(filename)
+    print(filename[34:-1])
+    if filename.find(tag) != -1:
+        l = filename.find(tag)
+        os.rename(filename, filename[l:-1])
